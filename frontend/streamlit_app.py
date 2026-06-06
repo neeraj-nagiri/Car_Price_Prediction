@@ -96,9 +96,10 @@ try:
 
             st.success(f"The Predicted Price of your car is:- {result['Prediction Price']}")
 
+
         else:
-            st.error(f"API Error: {response.status_code}")
-            st.write(response.text)
+            st.write("Status Code:", response.status_code)
+            st.write("Response Text:", response.text)
 
 except Exception as e:
     st.error(f"Error: {e}")

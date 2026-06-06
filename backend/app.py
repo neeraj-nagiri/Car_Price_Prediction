@@ -9,6 +9,10 @@ pipeline = joblib.load(BASE_DIR/"Car_price_prediction_pipeline.pkl")
 
 app = FastAPI()
 
+@app.get("/")
+def home():
+    return "Car Price Prediction API is running"
+
 @app.post("/predict")
 def predict(car:CarData):
     new_car = pd.DataFrame({

@@ -87,7 +87,7 @@ try:
         }
 
         response = requests.post(
-            "https://127.0.0.1:8000/predict",
+            "https://car-price-backend-qess.onrender.com/predict",
             json=data
         )
         if response.status_code==200:
